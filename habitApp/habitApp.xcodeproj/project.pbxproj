@@ -14,6 +14,8 @@
 		FE0331F71C82848B00A1091E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0331F61C82848B00A1091E /* Images.xcassets */; };
 		FE0331FA1C82848B00A1091E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0331F81C82848B00A1091E /* LaunchScreen.xib */; };
 		FE0332061C82848B00A1091E /* habitAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0332051C82848B00A1091E /* habitAppTests.m */; };
+		FE0332111C828D2300A1091E /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0332101C828D2300A1091E /* Goal.m */; };
+		FE58B89F1C829F8A0094F7D9 /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58B89E1C829F8A0094F7D9 /* AddGoalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		FE0331FF1C82848B00A1091E /* habitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = habitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0332041C82848B00A1091E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE0332051C82848B00A1091E /* habitAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = habitAppTests.m; sourceTree = "<group>"; };
+		FE03320F1C828D2300A1091E /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		FE0332101C828D2300A1091E /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		FE58B89D1C829F8A0094F7D9 /* AddGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalViewController.h; sourceTree = "<group>"; };
+		FE58B89E1C829F8A0094F7D9 /* AddGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				FE0331F61C82848B00A1091E /* Images.xcassets */,
 				FE0331F81C82848B00A1091E /* LaunchScreen.xib */,
 				FE0331E91C82848B00A1091E /* Supporting Files */,
+				FE03320F1C828D2300A1091E /* Goal.h */,
+				FE0332101C828D2300A1091E /* Goal.m */,
+				FE58B89D1C829F8A0094F7D9 /* AddGoalViewController.h */,
+				FE58B89E1C829F8A0094F7D9 /* AddGoalViewController.m */,
 			);
 			path = habitApp;
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0332111C828D2300A1091E /* Goal.m in Sources */,
+				FE58B89F1C829F8A0094F7D9 /* AddGoalViewController.m in Sources */,
 				FE0331F21C82848B00A1091E /* ViewController.m in Sources */,
 				FE0331EF1C82848B00A1091E /* AppDelegate.m in Sources */,
 				FE0331EC1C82848B00A1091E /* main.m in Sources */,
@@ -416,6 +428,7 @@
 				FE03320B1C82848B00A1091E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE03320C1C82848B00A1091E /* Build configuration list for PBXNativeTarget "habitAppTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +437,7 @@
 				FE03320E1C82848B00A1091E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
