@@ -10,4 +10,6 @@
 
 @implementation Goal
 
+//Goal Constructor
+
 @end

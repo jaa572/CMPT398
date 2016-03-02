@@ -10,4 +10,30 @@
 
 @interface Goal : NSObject
 
+ typedef enum {
+    //Distances
+    Kilometres,
+    Metres,
+    
+    //Time
+    Days,
+    Hours,
+    Minutes,
+    
+    //Weight
+    Pounds,
+    
+    //Frequency
+    Units,
+    //occurences,
+
+}goalType;
+
+@property NSString* imageName;
+@property NSString* goalName;
+@property NSInteger goalLimit;
+@property NSInteger goalStart;
+@property NSDate* startDate;
+@property NSDate* endDate;
+
 @end
