@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
+//Outlet for the GoalType UIPicker
+@property (weak, nonatomic) IBOutlet UIPickerView *goalTypePicker;
+
+-(IBAction)buttonPressed:(UIButton *)sender;
 
 @end
 
