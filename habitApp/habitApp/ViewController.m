@@ -12,6 +12,7 @@
 @interface ViewController ()
 
 @property NSMutableArray* goalList;
+@property NSString *path;
 
 @property NSArray *pickerData;
 @property UIImage *logo;
@@ -62,9 +63,17 @@
     
     self.navigationItem.titleView = _logoView;
     
+    //Set URL path for KeyedArchiver
+    self.path = newGoal.getPropertyListPath;
     
-    
-    
+    if ( [[NSFileManager defaultManager] fileExistsAtPath:_path] ){
+        self.goalList = [ NSKeyedUnarchiver unarchiveObjectWithFile:_path ];
+        
+        for (Goal *e in self.goalList){
+            // NSLog(@"The unarchived, reconstitute object is %@", e);
+        }
+    }
+
     
 }
 
@@ -186,7 +195,29 @@
     }
 }
 
+// Save data to file button ============================
 
+-(IBAction)addNewButton:(id)sender {
+    
+    
+    //does this need to be released????
+    Goal* currentGoal = [ Goal new ];
+    [ currentGoal setGoalName:goalName.text];
+    [ currentGoal setImageName:@"zebra_icon"];
+    
+    //add other fields here
+    
+    [ self.goalList addObject:currentGoal ];
+    
+    //NSLog(self.path);
+    
+    NSLog(@"%lu", (unsigned long)self.goalList.count);
+    NSLog(currentGoal.goalName);
+    
+    //archive data and save to path
+    [NSKeyedArchiver archiveRootObject:self.goalList toFile:self.path];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

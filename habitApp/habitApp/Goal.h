@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Goal : NSObject
+@interface Goal : NSObject <NSCoding>
 
  typedef enum {
     //Distances
@@ -32,12 +32,19 @@
 //Name of Image Icon they are working towards
 @property NSString* imageName;
 //Name of the Goal the user is creating
-@property NSString* goalName;
+@property (nonatomic) NSString* goalName;
 //Limit of the Goal to reach
 @property NSInteger goalLimit;
 
 @property NSInteger goalStart;
 @property NSDate* startDate;
 @property NSDate* endDate;
+
+-(NSString*) getPropertyListPath;
+-(void)setGoalName:(NSString*) name;
+-(void)getGoalName:(NSString*) image;
+-(NSString*)getGoalName;
+-(NSString*)getImageName;
+
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="x8N-r3-IZX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="x8N-r3-IZX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Goallist View Controller-->
@@ -75,22 +75,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-25-03i">
-                                <rect key="frame" x="16" y="104" width="306" height="30"/>
-                                <animations/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" searchField="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAa-Ub-cwg">
-                                <rect key="frame" x="16" y="78" width="86" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQK-yC-b37">
                                 <rect key="frame" x="16" y="388" width="115" height="31"/>
                                 <animations/>
@@ -113,8 +97,9 @@
                                 </accessibility>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uS-WY-NsX">
-                                <rect key="frame" x="137" y="603" width="100" height="30"/>
+                                <rect key="frame" x="95" y="466" width="175" height="50"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Select Reward">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -150,6 +135,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Goal Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-25-03i">
+                                <rect key="frame" x="34" y="101" width="306" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" searchField="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-5k-tXP">
+                                <rect key="frame" x="157" y="524" width="64" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewButton:" destination="Sfn-0g-5DV" eventType="touchUpInside" id="EUY-82-503"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -163,6 +167,7 @@
                         <outlet property="endDateSwitch" destination="qnt-jl-0yG" id="TQf-bT-50z"/>
                         <outlet property="goalLimitControl" destination="oUQ-k4-mxt" id="6Tc-gc-eTv"/>
                         <outlet property="goalLimitLabel" destination="ohi-ym-S1v" id="lu4-og-wfR"/>
+                        <outlet property="goalName" destination="6OW-25-03i" id="Kaa-c1-xho"/>
                         <outlet property="goalTypePicker" destination="lKn-UG-C5E" id="idA-8E-ESh"/>
                         <outlet property="selectDateButton" destination="KLH-3q-lgB" id="Wyd-mf-rTx"/>
                     </connections>

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
+    IBOutlet UITextField *goalName;
+}
 
 //Outlet for the GoalType UIPicker
 @property (weak, nonatomic) IBOutlet UIPickerView *goalTypePicker;

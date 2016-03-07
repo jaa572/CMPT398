@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>93894BAB-8F33-4CA8-B862-FE13E81924DE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>habitApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>047ADB6528034FE27976FD8C2703F1638E2590F2</key>
 		<string>https://github.com/jaa572/CMPT398.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>habitApp/habitApp.xcodeproj/project.xcworkspace</string>
+	<string>habitApp/habitApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>047ADB6528034FE27976FD8C2703F1638E2590F2</key>
