@@ -29,9 +29,13 @@
 
 }goalType;
 
+//Name of Image Icon they are working towards
 @property NSString* imageName;
+//Name of the Goal the user is creating
 @property NSString* goalName;
+//Limit of the Goal to reach
 @property NSInteger goalLimit;
+
 @property NSInteger goalStart;
 @property NSDate* startDate;
 @property NSDate* endDate;

@@ -15,7 +15,8 @@
 		FE0331FA1C82848B00A1091E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0331F81C82848B00A1091E /* LaunchScreen.xib */; };
 		FE0332061C82848B00A1091E /* habitAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0332051C82848B00A1091E /* habitAppTests.m */; };
 		FE0332111C828D2300A1091E /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0332101C828D2300A1091E /* Goal.m */; };
-		FE58B89F1C829F8A0094F7D9 /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58B89E1C829F8A0094F7D9 /* AddGoalViewController.m */; };
+		FE8A0DE11C87AE7F0013CE8D /* RewardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8A0DE01C87AE7F0013CE8D /* RewardCollectionViewController.m */; };
+		FE8A0DE41C87AFD50013CE8D /* RewardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8A0DE31C87AFD50013CE8D /* RewardCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,10 @@
 		FE0332051C82848B00A1091E /* habitAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = habitAppTests.m; sourceTree = "<group>"; };
 		FE03320F1C828D2300A1091E /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
 		FE0332101C828D2300A1091E /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
-		FE58B89D1C829F8A0094F7D9 /* AddGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalViewController.h; sourceTree = "<group>"; };
-		FE58B89E1C829F8A0094F7D9 /* AddGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalViewController.m; sourceTree = "<group>"; };
+		FE8A0DDF1C87AE7F0013CE8D /* RewardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCollectionViewController.h; sourceTree = "<group>"; };
+		FE8A0DE01C87AE7F0013CE8D /* RewardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardCollectionViewController.m; sourceTree = "<group>"; };
+		FE8A0DE21C87AFD50013CE8D /* RewardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCollectionViewCell.h; sourceTree = "<group>"; };
+		FE8A0DE31C87AFD50013CE8D /* RewardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +100,8 @@
 				FE0331E91C82848B00A1091E /* Supporting Files */,
 				FE03320F1C828D2300A1091E /* Goal.h */,
 				FE0332101C828D2300A1091E /* Goal.m */,
-				FE58B89D1C829F8A0094F7D9 /* AddGoalViewController.h */,
-				FE58B89E1C829F8A0094F7D9 /* AddGoalViewController.m */,
+				FE8A0DE21C87AFD50013CE8D /* RewardCollectionViewCell.h */,
+				FE8A0DE31C87AFD50013CE8D /* RewardCollectionViewCell.m */,
 			);
 			path = habitApp;
 			sourceTree = "<group>";
@@ -108,6 +111,8 @@
 			children = (
 				FE0331EA1C82848B00A1091E /* Info.plist */,
 				FE0331EB1C82848B00A1091E /* main.m */,
+				FE8A0DDF1C87AE7F0013CE8D /* RewardCollectionViewController.h */,
+				FE8A0DE01C87AE7F0013CE8D /* RewardCollectionViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,8 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE0332111C828D2300A1091E /* Goal.m in Sources */,
-				FE58B89F1C829F8A0094F7D9 /* AddGoalViewController.m in Sources */,
+				FE8A0DE11C87AE7F0013CE8D /* RewardCollectionViewController.m in Sources */,
 				FE0331F21C82848B00A1091E /* ViewController.m in Sources */,
+				FE8A0DE41C87AFD50013CE8D /* RewardCollectionViewCell.m in Sources */,
 				FE0331EF1C82848B00A1091E /* AppDelegate.m in Sources */,
 				FE0331EC1C82848B00A1091E /* main.m in Sources */,
 			);
