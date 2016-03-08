@@ -66,6 +66,7 @@
     //Set URL path for KeyedArchiver
     self.path = newGoal.getPropertyListPath;
     
+    //Load Goals from Archive
     if ( [[NSFileManager defaultManager] fileExistsAtPath:_path] ){
         self.goalList = [ NSKeyedUnarchiver unarchiveObjectWithFile:_path ];
         
@@ -144,9 +145,6 @@
 
 
 
-
-
-
 //GoalType Picker View===============================================
 
 //# of columns of data
@@ -165,6 +163,10 @@
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return _pickerData[row];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
 }
 
 //Goal Limit=========================================================
@@ -204,6 +206,8 @@
     Goal* currentGoal = [ Goal new ];
     [ currentGoal setGoalName:goalName.text];
     [ currentGoal setImageName:@"zebra_icon"];
+    
+    
     
     //add other fields here
     

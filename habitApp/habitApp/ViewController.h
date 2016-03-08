@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
     IBOutlet UITextField *goalName;
+    
 }
 
 //Outlet for the GoalType UIPicker

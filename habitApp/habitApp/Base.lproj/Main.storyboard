@@ -95,6 +95,9 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <outlet property="delegate" destination="Sfn-0g-5DV" id="sEU-Zf-JKg"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uS-WY-NsX">
                                 <rect key="frame" x="95" y="466" width="175" height="50"/>
@@ -168,7 +171,7 @@
                         <outlet property="goalLimitControl" destination="oUQ-k4-mxt" id="6Tc-gc-eTv"/>
                         <outlet property="goalLimitLabel" destination="ohi-ym-S1v" id="lu4-og-wfR"/>
                         <outlet property="goalName" destination="6OW-25-03i" id="Kaa-c1-xho"/>
-                        <outlet property="goalTypePicker" destination="lKn-UG-C5E" id="idA-8E-ESh"/>
+                        <outlet property="goalTypePicker" destination="lKn-UG-C5E" id="oEt-Za-YvZ"/>
                         <outlet property="selectDateButton" destination="KLH-3q-lgB" id="Wyd-mf-rTx"/>
                     </connections>
                 </viewController>
@@ -260,7 +263,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ohq-vv-YKn"/>
+        <segue reference="ciS-t2-cqf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.10719867769264184" green="0.88306897095959591" blue="0.22219097565862336" alpha="1" colorSpace="calibratedRGB"/>
 </document>
