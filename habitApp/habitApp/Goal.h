@@ -49,5 +49,7 @@
 -(NSString*)getGoalName;
 -(NSString*)getImageName;
 
+-(void)increaseGoalStart;
+
 
 @end

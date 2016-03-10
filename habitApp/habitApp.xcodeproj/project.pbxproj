@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503FBA7E1C921AED00EE9BDB /* AvatarCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503FBA7D1C921AED00EE9BDB /* AvatarCollectionViewController.m */; };
+		503FBA811C921C3D00EE9BDB /* AvatarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 503FBA801C921C3D00EE9BDB /* AvatarCollectionViewCell.m */; };
 		FE0331EC1C82848B00A1091E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0331EB1C82848B00A1091E /* main.m */; };
 		FE0331EF1C82848B00A1091E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0331EE1C82848B00A1091E /* AppDelegate.m */; };
 		FE0331F21C82848B00A1091E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0331F11C82848B00A1091E /* ViewController.m */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		503FBA7C1C921AED00EE9BDB /* AvatarCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarCollectionViewController.h; sourceTree = "<group>"; };
+		503FBA7D1C921AED00EE9BDB /* AvatarCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarCollectionViewController.m; sourceTree = "<group>"; };
+		503FBA7F1C921C3D00EE9BDB /* AvatarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarCollectionViewCell.h; sourceTree = "<group>"; };
+		503FBA801C921C3D00EE9BDB /* AvatarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarCollectionViewCell.m; sourceTree = "<group>"; };
 		FE0331E61C82848B00A1091E /* habitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0331EA1C82848B00A1091E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE0331EB1C82848B00A1091E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +108,10 @@
 				FE0332101C828D2300A1091E /* Goal.m */,
 				FE8A0DE21C87AFD50013CE8D /* RewardCollectionViewCell.h */,
 				FE8A0DE31C87AFD50013CE8D /* RewardCollectionViewCell.m */,
+				503FBA7C1C921AED00EE9BDB /* AvatarCollectionViewController.h */,
+				503FBA7D1C921AED00EE9BDB /* AvatarCollectionViewController.m */,
+				503FBA7F1C921C3D00EE9BDB /* AvatarCollectionViewCell.h */,
+				503FBA801C921C3D00EE9BDB /* AvatarCollectionViewCell.m */,
 			);
 			path = habitApp;
 			sourceTree = "<group>";
@@ -237,9 +247,11 @@
 				FE0332111C828D2300A1091E /* Goal.m in Sources */,
 				FE8A0DE11C87AE7F0013CE8D /* RewardCollectionViewController.m in Sources */,
 				FE0331F21C82848B00A1091E /* ViewController.m in Sources */,
+				503FBA811C921C3D00EE9BDB /* AvatarCollectionViewCell.m in Sources */,
 				FE8A0DE41C87AFD50013CE8D /* RewardCollectionViewCell.m in Sources */,
 				FE0331EF1C82848B00A1091E /* AppDelegate.m in Sources */,
 				FE0331EC1C82848B00A1091E /* main.m in Sources */,
+				503FBA7E1C921AED00EE9BDB /* AvatarCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

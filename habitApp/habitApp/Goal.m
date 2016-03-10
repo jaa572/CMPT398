@@ -40,6 +40,10 @@
     return _imageName;
 }
 
+-(void)increaseGoalStart{
+    _goalStart += 1;
+}
+
 
 -(NSString*) getPropertyListPath{
     NSURL *documentDir = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];

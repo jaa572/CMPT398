@@ -226,6 +226,8 @@
 
 -(IBAction)increaseButtonPressed:(id)sender cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"increae Hit!!");
+    
+    
     /*
     
     UITableViewCell *selectedCell = (UITableViewCell*) [sender superview];
