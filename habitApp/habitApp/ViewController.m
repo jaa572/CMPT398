@@ -40,7 +40,8 @@
     self.pickerData = @[ @"Kilometres", @"Metres", @"Days", @"Hours", @"Minutes", @"Pounds", @"Units(Frequency)" ];
     self.goalTypePicker.dataSource = self;
     self.goalTypePicker.delegate = self;
-    [self.goalTypePicker selectRow:4 inComponent:0 animated:YES];
+    [self.goalTypePicker selectRow:0 inComponent:0 animated:YES];
+    _selectedGoalType = @"Kilometres";
     
     self.goalLimitControl.autorepeat = YES;
     self.goalLimitLabel.text = [NSString stringWithFormat:@"%d", 00];
@@ -53,6 +54,7 @@
     
     Goal* newGoal = [ Goal new ];
     newGoal.goalName = @"Run 10km";
+    newGoal.goalType2 = _selectedGoalType;
     newGoal.goalLimit = 20;
     newGoal.goalStart = 0;
     newGoal.imageName = @"zebra_icon";
@@ -105,7 +107,12 @@
     //Can access the array with the below.  But need to first put things in the array.
     Goal* myObject = self.goalList[indexPath.row];
     
-    cell.textLabel.text = myObject.goalName;
+    NSMutableString *goalAndType = [[NSMutableString alloc]init];
+    [ goalAndType appendString:myObject.goalName ];
+    [ goalAndType appendString:@" "];
+    [ goalAndType appendString:_selectedGoalType];
+    cell.textLabel.text = goalAndType;
+    
     cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];
     cell.imageView.image = [UIImage imageNamed:myObject.imageName];
     
