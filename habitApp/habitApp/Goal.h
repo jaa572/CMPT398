@@ -35,14 +35,17 @@
 @property (nonatomic) NSString* goalName;
 //Limit of the Goal to reach
 @property NSInteger goalLimit;
+//Goal Type Selected from UIPickerView
+@property NSString* goalType2;
 
 @property NSInteger goalStart;
 @property NSDate* startDate;
 @property NSDate* endDate;
 
 -(NSString*) getPropertyListPath;
+-(void)setImageName:(NSString*) image;
 -(void)setGoalName:(NSString*) name;
--(void)getGoalName:(NSString*) image;
+-(void)setGoalType2:(NSString *)goalSelected;
 -(NSString*)getGoalName;
 -(NSString*)getImageName;
 

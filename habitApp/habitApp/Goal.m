@@ -28,6 +28,10 @@
     _imageName = image;
 }
 
+-(void)setGoalType2:(NSString *)goalSelected{
+    _goalType2 = goalSelected;
+}
+
 -(NSString*)getGoalName{
     return _goalName;
 }
@@ -39,7 +43,7 @@
 
 -(NSString*) getPropertyListPath{
     NSURL *documentDir = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-    NSURL *plist = [documentDir URLByAppendingPathComponent:@"goalList.plist"];
+    NSURL *plist = [documentDir URLByAppendingPathComponent:@"goalList2.plist"];
     return plist.path;
 }
 
@@ -47,6 +51,7 @@
 - (void)encodeWithCoder:(NSCoder *)coder {
     [coder encodeObject:_goalName forKey:@"userGoalName"];
     [coder encodeObject:_imageName forKey:@"imageName"];
+    [coder encodeObject:_goalType2 forKey:@"goalTypeSelected"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -55,6 +60,7 @@
     if(self){
         _goalName = [decoder decodeObjectForKey:@"userGoalName"];
         _imageName = [decoder decodeObjectForKey:@"imageName"];
+        _goalType2 = [decoder decodeObjectForKey:@"goalTypeSelected"];
     }
     return self;
 }

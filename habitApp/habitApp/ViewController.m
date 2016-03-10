@@ -15,6 +15,7 @@
 @property NSString *path;
 
 @property NSArray *pickerData;
+@property NSString* selectedGoalType;
 @property UIImage *logo;
 @property UIImageView *logoView;
 @property (weak, nonatomic) IBOutlet UISwitch *endDateSwitch;
@@ -147,16 +148,24 @@
 
 //GoalType Picker View===============================================
 
-//# of columns of data
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    return 1;
+    NSString *goalTypeSelected = [ _pickerData objectAtIndex:row];
+    _selectedGoalType = goalTypeSelected;
+    NSLog(goalTypeSelected);
 }
+
 
 //# of rows of data
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return _pickerData.count;
+}
+
+//# of columns of data
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
 }
 
 //data to return
@@ -165,9 +174,7 @@
     return _pickerData[row];
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-}
+
 
 //Goal Limit=========================================================
 -(IBAction)goalLimitChanged:(UIStepper *)sender
@@ -204,8 +211,9 @@
     
     //does this need to be released????
     Goal* currentGoal = [ Goal new ];
-    [ currentGoal setGoalName:goalName.text];
-    [ currentGoal setImageName:@"zebra_icon"];
+    [ currentGoal setGoalName:goalName.text ];
+    [ currentGoal setImageName:@"zebra_icon" ];
+    [ currentGoal setGoalType2:_selectedGoalType ];
     
     
     

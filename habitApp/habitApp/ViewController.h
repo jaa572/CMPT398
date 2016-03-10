@@ -16,6 +16,7 @@
 //Outlet for the GoalType UIPicker
 @property (weak, nonatomic) IBOutlet UIPickerView *goalTypePicker;
 
+
 -(IBAction)buttonPressed:(UIButton *)sender;
 
 @end
