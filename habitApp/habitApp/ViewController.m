@@ -116,12 +116,26 @@
     cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];
     cell.imageView.image = [UIImage imageNamed:myObject.imageName];
     
-    UIButton *increaseGoalProgress = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [increaseGoalProgress addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+    //Increase button in cell
     
+    UIButton *increaseGoalProgress = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    increaseGoalProgress.frame = CGRectMake(250.0f, 5.0f, 150.0f, 30.0f);
     [increaseGoalProgress setTitle:@"Increase +" forState:UIControlStateNormal];
-    increaseGoalProgress.frame = CGRectMake(150.0f, 5.0f, 150.0f, 30.0f);
     [cell addSubview:increaseGoalProgress];
+    [increaseGoalProgress addTarget:self action:@selector(increaseButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+     /*
+    
+    // add friend button
+    UIButton *addFriendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    addFriendButton.frame = CGRectMake(200.0f, 5.0f, 75.0f, 30.0f);
+    [addFriendButton setTitle:@"Add" forState:UIControlStateNormal];
+    [cell addSubview:addFriendButton];
+    [addFriendButton addTarget:self
+                        action:@selector(increaseButtonPressed:)
+              forControlEvents:UIControlEventTouchUpInside];
+     */
     
     return cell;
 }
@@ -129,10 +143,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self performSegueWithIdentifier:@"editGoal" sender:self];
-    /*Goal* myObject = self.goalList[indexPath.row];
-    myObject.goalStart += 1;
-    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];*/
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -212,6 +223,23 @@
 }
 
 // Save data to file button ============================
+
+-(IBAction)increaseButtonPressed:(id)sender cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"increae Hit!!");
+    /*
+    
+    UITableViewCell *selectedCell = (UITableViewCell*) [sender superview];
+    //NSIndexPath *pathToCell = [UITableView indexPathForCell:selectedCell];
+    Goal* myObject = self.goalList[indexPath.row];
+    myObject.goalStart += 1;
+    selectedCell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ]; */
+    
+    /*UITableViewCell* cell = [UITableView cellForRowAtIndexPath:indexPath];
+    Goal* myObject = self.goalList[indexPath.row];
+    myObject.goalStart += 1;
+    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];*/
+}
+
 
 -(IBAction)addNewButton:(id)sender {
     
