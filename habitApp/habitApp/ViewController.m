@@ -56,7 +56,7 @@
     newGoal.goalName = @"Run 10km";
     newGoal.goalType2 = _selectedGoalType;
     newGoal.goalLimit = 20;
-    newGoal.goalStart = 0;
+    newGoal.goalCurrent = 0;
     newGoal.imageName = @"zebra_icon";
     
     [ self.goalList addObject:newGoal ];
@@ -77,7 +77,6 @@
             // NSLog(@"The unarchived, reconstitute object is %@", e);
         }
     }
-
     
 }
 
@@ -113,29 +112,26 @@
     [ goalAndType appendString:_selectedGoalType];
     cell.textLabel.text = goalAndType;
     
-    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld %@", (long)myObject.goalStart, (long)myObject.goalLimit, myObject.getGoalType];
+    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld %@", (long)myObject.goalCurrent, (long)myObject.goalLimit, myObject.getGoalType];
     cell.imageView.image = [UIImage imageNamed:myObject.imageName];
     
     //Increase button in cell
     
-    UIButton *increaseGoalProgress = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    increaseGoalProgress.frame = CGRectMake(250.0f, 5.0f, 150.0f, 30.0f);
-    [increaseGoalProgress setTitle:@"Increase +" forState:UIControlStateNormal];
-    [cell addSubview:increaseGoalProgress];
-    [increaseGoalProgress addTarget:self action:@selector(increaseButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-     /*
-    
-    // add friend button
+    /*
     UIButton *addFriendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     addFriendButton.frame = CGRectMake(200.0f, 5.0f, 75.0f, 30.0f);
     [addFriendButton setTitle:@"Add" forState:UIControlStateNormal];
     [cell addSubview:addFriendButton];
     [addFriendButton addTarget:self
-                        action:@selector(increaseButtonPressed:)
+                        action:@selector(increaseIt:cellForRowAtIndexPath:)
               forControlEvents:UIControlEventTouchUpInside];
-     */
+    */
+    
+    UIButton *increaseGoalProgress = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    increaseGoalProgress.frame = CGRectMake(240.0f, 5.0f, 150.0f, 30.0f);
+    [increaseGoalProgress setTitle:@"Increase +" forState:UIControlStateNormal];
+    [cell addSubview:increaseGoalProgress];
+    [increaseGoalProgress addTarget:self action:@selector(increaseButtonPressed:cellForRowAtIndexPath:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -158,8 +154,8 @@
     UITableViewCell *selectedCell = (UITableViewCell*) [sender superview];
     //NSIndexPath *pathToCell = [UITableView indexPathForCell:selectedCell];
     Goal* myObject = self.goalList[indexPath.row];
-    myObject.goalStart += 1;
-    selectedCell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];
+    //myObject.goalCurrent += 1;
+    selectedCell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalCurrent, (long)myObject.goalLimit ];
 }
 
 
@@ -227,19 +223,6 @@
 -(IBAction)increaseButtonPressed:(id)sender cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"increae Hit!!");
     
-    
-    /*
-    
-    UITableViewCell *selectedCell = (UITableViewCell*) [sender superview];
-    //NSIndexPath *pathToCell = [UITableView indexPathForCell:selectedCell];
-    Goal* myObject = self.goalList[indexPath.row];
-    myObject.goalStart += 1;
-    selectedCell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ]; */
-    
-    /*UITableViewCell* cell = [UITableView cellForRowAtIndexPath:indexPath];
-    Goal* myObject = self.goalList[indexPath.row];
-    myObject.goalStart += 1;
-    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];*/
 }
 
 
@@ -251,18 +234,21 @@
     [ currentGoal setGoalName:goalName.text ];
     [ currentGoal setImageName:@"zebra_icon" ];
     [ currentGoal setGoalType2:_selectedGoalType ];
+    [ currentGoal setGoalLimit:self.limitChosen.text.integerValue ];
     
+    //NSLog(currentGoal.getGoalLimit);
+    NSLog(@"%lu", (unsigned long)currentGoal.getGoalLimit);
+    //NSLog(self.limitChosen.text.intValue);
     
     
     //add other fields here
     
     [ self.goalList addObject:currentGoal ];
     
-    //NSLog(self.path);
     
-    NSLog(@"%lu", (unsigned long)self.goalList.count);
-    NSLog(currentGoal.goalName);
-    
+  
+    // NSLog(currentGoal.goalName);
+    // NSLog(@"%lu", (unsigned long)self.goalList.count);
     //archive data and save to path
     [NSKeyedArchiver archiveRootObject:self.goalList toFile:self.path];
     

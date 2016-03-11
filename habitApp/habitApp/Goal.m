@@ -20,32 +20,60 @@
     return self;
 }
 
--(void)setGoalName:(NSString*) name{
+-(void)setGoalName:(NSString*) name
+{
     _goalName = name;
 }
 
--(void)setImageName:(NSString*) image{
+-(void)setImageName:(NSString*) image
+{
     _imageName = image;
 }
 
--(void)setGoalType2:(NSString *)goalSelected{
-    _goalType2 = goalSelected;
+-(void)setGoalLimit:(NSInteger) limit
+{
+    _goalLimit = limit;
+}
+
+-(void)setGoalType2:(NSString *)goalSelected
+{
+    _goalType = goalSelected;
+}
+
+-(void)setCurrentCompleted:(NSInteger) completed
+{
+    
 }
 
 -(NSString*)getGoalName{
+    
     return _goalName;
 }
 
--(NSString*)getImageName{
+-(NSString*)getImageName
+{
     return _imageName;
 }
 
--(NSString*)getGoalType{
-    return _goalType2;
+-(NSInteger)getGoalLimit
+
+{
+    return _goalLimit;
 }
 
--(void)increaseGoalStart{
-    _goalStart += 1;
+-(NSString*)getGoalType
+{
+    return _goalType;
+}
+
+-(NSInteger)getCurrentCompleted
+{
+    return _goalCurrent;
+}
+
+-(void)increaseGoalCompleted{
+    //_goalCurrent. += 1;
+    
 }
 
 
@@ -59,7 +87,10 @@
 - (void)encodeWithCoder:(NSCoder *)coder {
     [coder encodeObject:_goalName forKey:@"userGoalName"];
     [coder encodeObject:_imageName forKey:@"imageName"];
-    [coder encodeObject:_goalType2 forKey:@"goalTypeSelected"];
+    [coder encodeObject:_goalType forKey:@"goalTypeSelected"];
+    [coder encodeInteger:_goalLimit forKey:@"goalLimit"];
+    //[coder encodeObject:_goalCurrent forKey:@"goalCurrent"];
+    //[ coder encodeObject: self.getCurrentCompleted forKey:@"something"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -68,7 +99,9 @@
     if(self){
         _goalName = [decoder decodeObjectForKey:@"userGoalName"];
         _imageName = [decoder decodeObjectForKey:@"imageName"];
-        _goalType2 = [decoder decodeObjectForKey:@"goalTypeSelected"];
+        _goalType = [decoder decodeObjectForKey:@"goalTypeSelected"];
+        _goalLimit = [decoder decodeIntForKey:@"goalLimit"];
+        //_goalCurrent = [decoder decodeObjectForKey:@"goalCurrent"];
     }
     return self;
 }

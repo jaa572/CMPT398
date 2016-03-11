@@ -10,6 +10,7 @@
 
 @interface Goal : NSObject <NSCoding>
 
+/*
  typedef enum {
     //Distances
     Kilometres,
@@ -27,30 +28,45 @@
     Units,
     //occurences,
 
-}goalType;
+}goalType; */
 
-//Name of Image Icon they are working towards
-@property NSString* imageName;
-//Name of the Goal the user is creating
+
 @property (nonatomic) NSString* goalName;
-//Limit of the Goal to reach
-@property NSInteger goalLimit;
-//Goal Type Selected from UIPickerView
-@property NSString* goalType2;
+@property NSString* goalType;
+@property (nonatomic) NSInteger goalLimit;
+@property (nonatomic) NSNumber* saveLimit;
+@property NSInteger goalCurrent;
+@property NSNumber* saveCurrent;
 
-@property NSInteger goalStart;
 @property NSDate* startDate;
 @property NSDate* endDate;
 
--(NSString*) getPropertyListPath;
--(void)setImageName:(NSString*) image;
+@property (nonatomic) NSString* imageName;
+
+
 -(void)setGoalName:(NSString*) name;
 -(void)setGoalType2:(NSString *)goalSelected;
--(NSString*)getGoalName;
--(NSString*)getImageName;
--(NSString*)getGoalType;
+-(void)setGoalLimit:(NSInteger) limit;
+-(void)setCurrentCompleted:(NSInteger) completed;
 
--(void)increaseGoalStart;
+//setStartDate
+//setEndDate
+
+-(void)setImageName:(NSString*) image;
+
+
+-(NSString*)getGoalName;
+-(NSString*)getGoalType;
+-(NSInteger)getGoalLimit;
+-(NSInteger)getCurrentCompleted;
+
+//getStartdate
+//getEndDate
+
+-(NSString*)getImageName;
+
+-(NSString*) getPropertyListPath;
+-(void)increaseGoalCompleted;
 
 
 @end
