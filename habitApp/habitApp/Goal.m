@@ -79,7 +79,7 @@
 
 -(NSString*) getPropertyListPath{
     NSURL *documentDir = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-    NSURL *plist = [documentDir URLByAppendingPathComponent:@"goalList2.plist"];
+    NSURL *plist = [documentDir URLByAppendingPathComponent:@"goalList3.plist"];
     return plist.path;
 }
 

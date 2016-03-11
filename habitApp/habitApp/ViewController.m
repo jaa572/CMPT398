@@ -53,7 +53,7 @@
     
     
     Goal* newGoal = [ Goal new ];
-    newGoal.goalName = @"Run 10km";
+    newGoal.goalName = @"Run";
     newGoal.goalType2 = _selectedGoalType;
     newGoal.goalLimit = 20;
     newGoal.goalCurrent = 0;
@@ -109,10 +109,15 @@
     NSMutableString *goalAndType = [[NSMutableString alloc]init];
     [ goalAndType appendString:myObject.goalName ];
     [ goalAndType appendString:@" "];
-    [ goalAndType appendString:_selectedGoalType];
+    
+    // take int and convert it to string, then concatenate to cell title
+    NSString* limit = [NSString stringWithFormat:@"%li", (long)myObject.goalLimit];
+    [ goalAndType appendString:limit];
+    [ goalAndType appendString:@" "];
+    [ goalAndType appendString:myObject.goalType];
     cell.textLabel.text = goalAndType;
     
-    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld %@", (long)myObject.goalCurrent, (long)myObject.goalLimit, myObject.getGoalType];
+    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld %@ %@", (long)myObject.goalCurrent, (long)myObject.goalLimit, myObject.getGoalType, @"Completed!"];
     cell.imageView.image = [UIImage imageNamed:myObject.imageName];
     
     //Increase button in cell
@@ -221,7 +226,7 @@
 // Save data to file button ============================
 
 -(IBAction)increaseButtonPressed:(id)sender cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"increae Hit!!");
+    NSLog(@"Cell Number: ");
     
 }
 

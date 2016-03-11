@@ -34,9 +34,7 @@
 @property (nonatomic) NSString* goalName;
 @property NSString* goalType;
 @property (nonatomic) NSInteger goalLimit;
-@property (nonatomic) NSNumber* saveLimit;
 @property NSInteger goalCurrent;
-@property NSNumber* saveCurrent;
 
 @property NSDate* startDate;
 @property NSDate* endDate;
