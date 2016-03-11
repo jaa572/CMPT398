@@ -48,6 +48,7 @@
 -(void)setGoalType2:(NSString *)goalSelected;
 -(NSString*)getGoalName;
 -(NSString*)getImageName;
+-(NSString*)getGoalType;
 
 -(void)increaseGoalStart;
 

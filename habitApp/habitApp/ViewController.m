@@ -113,7 +113,7 @@
     [ goalAndType appendString:_selectedGoalType];
     cell.textLabel.text = goalAndType;
     
-    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalStart, (long)myObject.goalLimit ];
+    cell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld %@", (long)myObject.goalStart, (long)myObject.goalLimit, myObject.getGoalType];
     cell.imageView.image = [UIImage imageNamed:myObject.imageName];
     
     //Increase button in cell

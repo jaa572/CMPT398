@@ -40,6 +40,10 @@
     return _imageName;
 }
 
+-(NSString*)getGoalType{
+    return _goalType2;
+}
+
 -(void)increaseGoalStart{
     _goalStart += 1;
 }
