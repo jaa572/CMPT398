@@ -13,6 +13,7 @@
 
 @property NSMutableArray* goalList;
 @property NSString *path;
+@property UITableView* mainView;
 
 @property NSArray *pickerData;
 @property NSString* selectedGoalType;
@@ -96,7 +97,7 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" ];
-    
+    self.mainView = tableView;
     
     if ( cell == nil )
     {
@@ -141,6 +142,13 @@
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath * path = [ self.mainView indexPathForSelectedRow ];
+}
+
+
+//OLD TABLE CODE
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self performSegueWithIdentifier:@"editGoal" sender:self];
@@ -162,7 +170,7 @@
     //myObject.goalCurrent += 1;
     selectedCell.detailTextLabel.text = [ NSString stringWithFormat: @"%ld/%ld", (long)myObject.goalCurrent, (long)myObject.goalLimit ];
 }
-
+*/
 
 
 //GoalType Picker View===============================================
